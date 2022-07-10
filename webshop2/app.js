@@ -1,7 +1,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
-var mysql = require('mysql2');
+//var mysql = require('mysql2');
 var handlebars = require("handlebars");
 var fs = require("fs");
 var bodyParser = require('body-parser')
@@ -13,12 +13,12 @@ var patientendaten
 var patient
 var arztdaten;
 var arzt;
-var con = mysql.createConnection({
+/*var con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "Mateda04",
    database:'apa-system'
-});
+});*/
 const app = express();
 
 app.engine('hbs', exphbs({
@@ -232,6 +232,7 @@ app.post('/ApothekeAnsicht', urlencodedParser, function (req, res){
         var options = {
             'method': 'POST',
             'url': 'http://localhost:8090/items',
+            //'url': 'localhost:8090/items',
             'headers': {
               'Content-Type': 'application/json'
             },
