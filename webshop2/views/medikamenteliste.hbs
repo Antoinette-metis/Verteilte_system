@@ -1,0 +1,27 @@
+    {{>header}}
+	<div class="startseite">
+        <div class="card" style="width: 40rem;margin:0 auto;">
+            <div class="card-body" >
+                <table class="table">
+                <thead>
+                    <tr>
+                    
+                    <th scope="col">liste Medikamente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each Medikamente}}
+                            <tr>
+                                <td>{{idpatient}}</td>
+                                <td>{{nachname}}</td>
+                                <td>{{vorname}}</td>
+                                <td>{{'email adresse'}}</td>
+                                <td>{{krankheit}}</td>
+                                <td>{{krankenkasse}}</td>
+                            </tr>
+                    {{/each}}
+                </tbody>
+                </table>
+            </div>
+        </div>
+	</div>

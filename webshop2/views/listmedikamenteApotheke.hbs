@@ -1,0 +1,39 @@
+{{>header}}
+<div class="startseite">
+    <div class="card" style="width: 60rem;margin:0 auto;">
+        <div class="card-body" >
+             <p class="text-center"> LISTE MEDIKAMENTE</p>
+            <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Medikament ID</th>
+                    <th scope="col">Medikament name</th>
+                    <th scope="col">Medikament Preis</th>
+                    <th scope="col">Beschreibung</th>
+                    <th scope="col">Anzahl</th>
+                    <th scope="col">command</th>
+                    
+                </tr>
+                
+            </thead>
+            <tbody>
+                {{#each items}}
+                    <tr>
+                        <td>{{itemId}}</td>
+                        <td>{{name}}</td>
+                        <td>{{price}}</td>
+                        <td>{{description}}</td>
+                        <td>{{amount}}</td>
+                        {{!-- <td><button type="submit" method="post" class="btn btn-primary"  action='/items/delet/{{itemId}}' href="/items/delete/{{itemId}}">löschen</button></td> --}}
+                        <td><a type="submit" href="/items/delete/{{itemId}}" class="btn btn-primary ">Delete</a></td>
+                       
+                    </tr>
+                {{/each}}
+            </tbody>
+            </table>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary" onclick="location.href='/ApothekeAnsicht'">back to Apotheke Ansicht</button>
+        </div>
+    </div>
+</div>
